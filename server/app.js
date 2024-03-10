@@ -3,13 +3,13 @@ const app = express();
 const morgan = require('morgan');
 module.exports = app;
 
-// Logging middlware
+// Log middlware
 app.use(morgan('dev'))
 
-//body parsing middleware
+//Body parsing middleware
 app.use(express.json())
 
-//Base here
+//Base
 app.use('/api', require('./api'))
 
 app.use((err,req,res, next) =>{
