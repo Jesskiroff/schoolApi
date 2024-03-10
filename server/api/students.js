@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const { pool } = require("../db/index");
-module.exports = router;
 
 router.get("/", async (req, res, next) => {
   try {
@@ -52,3 +51,6 @@ router.delete("/:student_id", async (req, res, next) => {
     res.status(500).send("Server Error");
   }
 });
+
+
+module.exports = router;

@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const { pool } = require("../db/index");
 
-
 //ALL
 router.get("/", async (req, res, next) => {
   try {
