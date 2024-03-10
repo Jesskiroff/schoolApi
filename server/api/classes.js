@@ -6,6 +6,7 @@ router.get("/", async (req, res, next) => {
   try {
     const { rows } = await pool.query("SELECT * FROM classes");
     res.json(rows);
+    //console.log('Query result:' rows)
   } catch (err) {
     console.error("Error with all classes: ", err);
     res.status(500).send("Server Error");
