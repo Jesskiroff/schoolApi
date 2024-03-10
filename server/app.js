@@ -6,6 +6,9 @@ module.exports = app;
 // Logging middlware
 app.use(morgan('dev'))
 
+//body parsing middleware
+app.use(express.json())
+
 //Base here
 app.use('/api', require('./api'))
 
